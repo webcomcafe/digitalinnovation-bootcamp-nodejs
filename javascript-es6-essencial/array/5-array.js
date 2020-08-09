@@ -57,3 +57,33 @@ console.log(arrStr);
 // Transforma um array em outro tipi de acordo com a condição especificada
 const arrReduce = arr2.filter(value => typeof value === 'number').reduce((total, value) => total += value, 0);
 console.log(arrReduce);
+
+const users = [
+    {
+        name: 'Airton',
+        rate: 4.5,
+    },
+    {
+        name: 'Anderson',
+        rate: 4.8,
+    },
+    {
+        name: 'Patrícia',
+        rate: 4.9,
+    },
+    {
+        name: 'Waldemir',
+        rate: 4.9,
+    },
+    {
+        name: 'David',
+        rate: 4.8,
+    }
+];
+
+const total = users.reduce((total, user) => total + user.rate, 0);
+const media = (total / users.length);
+console.log(media);
+
+const top = users.reduce((tops, user) => ({ rate: tops.rate + user.rate }), { rate: 0 });
+console.log(top.rate / users.length);
