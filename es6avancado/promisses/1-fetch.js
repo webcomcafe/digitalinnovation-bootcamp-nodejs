@@ -1,0 +1,1 @@
+fetch('/users.json').then(stream => stream.json()).then(data => console.log(data));
